@@ -22,3 +22,17 @@ climbingLeaderboard([100, 100, 50, 40, 40, 20, 10], [5, 25, 50, 120]);
 
 climbingLeaderboard([100, 90, 90, 80, 75, 60], [50, 65, 77, 90, 102]) 
 // '---> 6, 5, 4, 2, 1 '
+
+
+
+function kangaroo(x1, v1, x2, v2) {
+    // Write your code here
+    for(let i = 1; i < 20; i++) {
+        x1+=v1;
+        x2+=v2;
+        if(x1 === x2) {
+            return 'YES';
+        }
+    }
+        return 'NO';
+}
