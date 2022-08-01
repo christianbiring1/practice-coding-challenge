@@ -35,6 +35,28 @@ function kangaroo(x1, v1, x2, v2) {
   return "NO";
 }
 
+/*
+ * Complete the 'getTotalX' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts following parameters:
+ *  1. INTEGER_ARRAY a
+ *  2. INTEGER_ARRAY b
+ */
+
+function getTotalX(a, b) {
+    // Write your code here
+    let count = 0;
+    for(let x = 1; x <= 100; x += 1) {
+        if(a.every(int => x % int === 0)) {
+            if(b.every(int => int % x === 0))
+            count += 1;
+        }
+    }
+    return count;
+}
+
+
 /* ************************* CAROUSSEL INFINITE MOVE OF IMAGE ************************************* */
 
 // Images are from unsplash
