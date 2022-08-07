@@ -35,3 +35,23 @@ function spinWords(string){
    }
    return string;
 }
+
+function StringChallenge(str) {
+  const reducerHash = {
+    ab: "c",
+    ac: "b",
+    ba: "c",
+    bc: "a",
+    ca: "b",
+    cb: "a"
+  };
+  let initial, key;
+  while (str !== initial) {
+    initial = str;
+    for (key in reducerHash) {
+      str = str.replace(key, reducerHash[key]);
+    }
+    // return str.length;
+  }
+  return str;
+}
