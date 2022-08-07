@@ -21,3 +21,17 @@ console.log(arraydiagonal([
     [7, 5, 0, 1, 6, 8]
   ])
 );
+
+
+function spinWords(string){
+  //TODO Have fun :)
+   const str = string.split(' ');
+   let out = '';
+   let replaced = '';
+   for(let key of str) {
+       if(key.length >= 5) {
+     string = string.replace(key, key.split('').reverse().join(''));
+       }
+   }
+   return string;
+}
