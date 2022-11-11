@@ -77,3 +77,33 @@ function birthday(s, d, m) {
     }
     return result;
 }
+
+// Show the prime numbers within a range of number
+
+function showPrime(limit) {
+  for(let number = 2; number <= limit; number += 1) {
+    let isPrime = true;
+    for(let factor = 2; factor < number; factor += 1) {
+      if(number % factor === 0) {
+        isPrime = false;
+        break;
+      }
+    }
+
+    if(isPrime) console.log(number)
+  }
+}
+
+//  By using the single responsability rule we can do
+
+function Prime(limit) {
+  for(let number = 2; number <= limit; number += 1) {
+    if(isPrime(number)) console.log(number)
+  }
+}
+
+function isPrime(number) {
+  for(let factor = 2; factor < number; factor += 1)
+    if(number % factor === 0) return false;
+    return true;
+}
