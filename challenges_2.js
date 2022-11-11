@@ -107,3 +107,16 @@ function isPrime(number) {
     if(number % factor === 0) return false;
     return true;
 }
+
+
+function moveElement(arr, index, offset) {
+  const out = [...arr];
+  const position = index + offset;
+  if(position >= arr.length || position < 0) {
+    console.error('Invalid Offset')
+    return;
+  }
+  const element = out.splice(index, 1)[0];
+  out.splice(position, 0, element);
+  return out;
+}
